@@ -35,8 +35,8 @@ Mentor - Prajwal
 
 13. Vishakha Angre
 14. SaiKrishna Rachuri
-15. Shubham Kolte
+15. Mohammad Imran
 
 Team-06
 Mentor - Rupam
-16. Mohammad Imran
+
