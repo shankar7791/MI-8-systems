@@ -21,7 +21,7 @@ Mentor - Divyani
 
     7. Pranjali Jagtap
     8. Sagar Chaudhari
-    9. Sandeep Rauri
+    9. Sandeep Ravuri
 
 Team-04
 Mentor - kishori
