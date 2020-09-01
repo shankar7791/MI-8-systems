@@ -1,42 +1,39 @@
 
-Team Members
+Git Commands
 
+1. install git.... 
 
-Team 01
-Mentor - Aishwarya
+$ sudo apt install git-all
 
-1. Adesh Kumbhar
-2. Chetan Kulkarni
-3. HitendraKumar kolhe
+2. Configure Git id and email id
 
-Team 02
-Mentor - Harshada
+for user id - $ git config --global user.name "yourusername"
+for Email id - $ git config --global user.email "youremail@email.com"
 
-4. Humera tamkeen
-5. Mahadev Rane
-6. Mohit Singh
+3. Check Configuration
+$ git config --list
 
-Team-03 
-Mentor - Divyani
+4. git clone Remote repository
 
-7. Pranjali Jagtap
-8. Sagar Chaudhari
-9. Sandeep Rauri
+$ git clone https://github.com/shankar7791/MI-8-systems.git
 
-Team-04
-Mentor - kishori
+5. Git add for add files
 
-10. Shubhangi Mamulkar
-11. Vaibhav Joshi
-12. Yashwanth Kumar
+$ git add "file name" 
 
-Team-05
-Mentor - Prajwal
+or 
 
-13. Vishakha Angre
-14. SaiKrishna Rachuri
-15. Shubham Kolte
+git add .
 
-Team-06
-Mentor - Rupam
-16. Mohammad Imran
+6. Commit The file
+
+$ git commit -m "commit msg"
+
+7. pushing the file to remote repository
+
+$ git push origin master
+
+8. to check current status
+
+$ git status
+
