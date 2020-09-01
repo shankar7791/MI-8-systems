@@ -40,3 +40,7 @@ Mentor - Prajwal
 Team-06
 Mentor - Rupam
 
+    16. Gaytri Patil
+    17. P Harikrishna Naidu
+    18. Priti Nakhate
+
