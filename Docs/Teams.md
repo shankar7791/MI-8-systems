@@ -44,3 +44,10 @@ Mentor - Rupam
     17. P Harikrishna Naidu
     18. Priti Nakhate
 
+Team-07
+Mentor - Shankar
+
+    19. Gargi Ashtikar
+    20. Sushmita Suryawanshi
+    21. Usharani Sherla
+
