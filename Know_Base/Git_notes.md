@@ -38,3 +38,17 @@ Git Commands
 
     $ git status
 
+Branching...
+
+  9. Creating new Barnch
+	
+    $ git branch branch_name
+
+  10. See the branch list
+
+    $ git branch --list
+
+  11. Switching th branch
+
+    $ git checkout branch_name
+
