@@ -1,0 +1,8 @@
+my name is sandeep am from andhra pradesh 
+currently hands on work on linux system programmer
+cp file1 file2
+rm file2
+mv a.txt b.txt //file a will be deleted and all data from a copied to b
+mkdir //make a dirctory
+rmdir myinfo.md  //myinfo.md will be removed
+ln -s file.txt link.txt // link the file
