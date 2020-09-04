@@ -47,7 +47,7 @@ Mentor - Rupam
 Team-07
 Mentor - Shankar
 
-    19. 
+    19. Vishwajeet Kumar
     20. Sushmita Suryawanshi
     21. Usharani Sherla
     
@@ -57,6 +57,12 @@ Mentor - Shankar
 
     22. Gaurav Singh
     23. Swathi s
-    24. Uva Rani.V
+    24. UvaRani.V
+    
+Team-09
+Mentor - sagar
+
+    25. Sandesh Suryawanshi
+    
     
    
