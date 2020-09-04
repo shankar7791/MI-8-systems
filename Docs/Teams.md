@@ -7,7 +7,7 @@ Mentor - Aishwarya
 
     1. Adesh Kumbhar
     2. Chetan Kulkarni
-    3. HitendraKumar kolhe
+    3. Mohammed Nawaz
 
 Team 02
 Mentor - Harshada
@@ -47,7 +47,7 @@ Mentor - Rupam
 Team-07
 Mentor - Shankar
 
-    19. Gargi Ashtikar
+    19. Vishwajeet Kumar
     20. Sushmita Suryawanshi
     21. Usharani Sherla
     
@@ -57,4 +57,12 @@ Mentor - Shankar
 
     22. Gaurav Singh
     23. Swathi s
-    24. Mohammed Nawaz
+    24. UvaRani.V
+    
+Team-09
+Mentor - sagar
+
+    25. Sandesh Suryawanshi
+    
+    
+   
