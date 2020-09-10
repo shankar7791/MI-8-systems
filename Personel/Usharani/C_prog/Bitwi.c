@@ -7,7 +7,7 @@ int main()
   //3. ^ XOR
   //4. !
   //5. ~
- // 6. << , >>
+ // 6. << , >> upgrade- left shift and right shift operator
 
     int a=12, b=25;
 
