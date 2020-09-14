@@ -1,6 +1,7 @@
 #include<stdio.h>
+#include "demo.c"
  
-int string_ln(char*);
+//int string_ln(char*);
  
 int 
 main(){
@@ -10,16 +11,8 @@ main(){
    scanf("%s",&str);
    
    length = string_ln(str);
+   display();
    printf("The length of the string  : %d\n", length);
    return 0;
 }
  
-int string_ln(char *p) 
-{
-   int count = 0;
-   while (*p != '\0') {
-      count++;
-      p++;
-   }
-   return count;
-}
