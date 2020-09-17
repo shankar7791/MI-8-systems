@@ -29,7 +29,7 @@ void main()
     for(i=0;i<=k;i++)
     {
       len=strlen(str1[i]);
-      for(j=0;x=len-1;j<x;j++,x--)
+      for(j=0,x=len-1;j<x;j++,x--)
       {
         temp=str1[i][j];
         str1[i][j]=str1[i][x];
