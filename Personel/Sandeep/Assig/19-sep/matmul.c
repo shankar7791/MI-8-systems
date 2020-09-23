@@ -8,7 +8,6 @@ int main()
   printf("Enter the number of rows and columns of first matrix\n");
   scanf("%d%d", &m, &n);
   printf("Enter the elements of first matrix\n");
- 
   for (  c = 0 ; c < m ; c++ )
     for ( d = 0 ; d < n ; d++ )
       scanf("%d", &fr[c][d]);
