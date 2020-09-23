@@ -1,0 +1,10 @@
+#testcases.yaml
+
+1. bubble sort:
+#Testcases:
+1.1. sort is working or not
+1.2. is it working for different size of data
+1.3. Number of comparisons
+
+2. Binary search:
+2.1 
