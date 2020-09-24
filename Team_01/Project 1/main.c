@@ -5,6 +5,7 @@ extern void bubbleSort(int *, int);
 extern void printArray(int *, int);
 extern void testbinary();
 extern void insertionSort(int *, int);
+extern void testbubble();
 extern int number_comparisons;
 extern int number_swaps;
 
@@ -12,7 +13,6 @@ int main()
 {
     int arr[100];
     int n, i, num, a, opt, opt1;
-    testbinary();
     printf("\nEnter how many number to Sort:\n");
     scanf("%d", &n);
     printf("Enter Numbers:\n");
@@ -32,6 +32,7 @@ int main()
     switch (opt)
     {
     case 1:
+        testbubble();
         bubbleSort(arr, n);
         printf("Sorted array  by Bubble sort: \n");
         printArray(arr, n);
@@ -60,6 +61,7 @@ int main()
     switch (opt1)
     {
     case 2:
+        testbinary();
         a = binarySearch(arr, 0, n, num);
         if (a == -1)
         {
