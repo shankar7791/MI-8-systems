@@ -11,6 +11,14 @@ void swap(int *x, int *y)
     *y = temp;
 }
 
+void printArray(int arr[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+        printf("%d  ", arr[i]);
+    printf("\n");
+}
+
 void bubbleSort(int arr[], int n)
 {
     int i, j;
@@ -23,10 +31,20 @@ void bubbleSort(int arr[], int n)
         }
 }
 
-void printArray(int arr[], int n)
+void insertionSort(int arr[], int n)
 {
-    int i;
+    int i, j, temp;
     for (i = 0; i < n; i++)
-        printf("%d  ", arr[i]);
-    printf("\n");
+    {
+        temp = arr[i];
+        j = i - 1;
+        number_comparisons++;
+        while (j >= 0 && arr[j] > temp)
+        {
+            number_swaps++;
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = temp;
+    }
 }
