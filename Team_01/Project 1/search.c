@@ -1,4 +1,6 @@
 #include <stdio.h>
+//In Binary search data must be sorted.
+//bineary search check middle element and dicide to going lower or upper or return.
 int binarySearch(int arr[], int l, int r, int x)
 {
     while (l <= r)
