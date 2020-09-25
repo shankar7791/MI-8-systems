@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include  <stdlib.h>
-void Quicksort(int list[], int low, int high)
+
+void quicksort(int list[], int low, int high)
 {
-int pivot, i, j, temp;
+    int pivot, i, j, temp;
     if (low < high)
     {
         pivot = low;
@@ -25,11 +25,10 @@ int pivot, i, j, temp;
                 list[j] = temp;
             }
         }
-        // swapping of numbers in ascending order
         temp = list[j];
         list[j] = list[pivot];
         list[pivot] = temp;
-        Quicksort(list, low, j - 1);
-        Quicksort(list, j + 1, high);
+        quicksort(list, low, j - 1);
+        quicksort(list, j + 1, high);
     }
 }

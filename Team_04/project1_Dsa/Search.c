@@ -12,15 +12,20 @@ int BinerySearch(int array[], int n, int search)
   while (first <= last)
   {
     if (array[middle] < search)
+    {
       first = middle + 1;
+    }
     else if (array[middle] == search)
     {
       printf(" \n %d found at location %d", search, middle + 1);
       break;
     }
     else
+
+    {
       last = middle - 1;
-    middle = (first + last) / 2;
+      middle = (first + last) / 2;
+    }
   }
   if (first > last)
   {
@@ -42,7 +47,8 @@ int LinearSearch(int array[], int c, int n, int search)
     }
   }
   if (c == n)
+  {
     printf("\n Not found! \n  %d is not found in the list.\n", search);
-
+  }
   return 0;
 }
