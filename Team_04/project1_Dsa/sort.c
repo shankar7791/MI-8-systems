@@ -1,7 +1,8 @@
-#include <stdio.h>
+ array2[k];
+//         k++;#include <stdio.h>
 #include <stdlib.h>
 
-// Function of Quicksort
+// Function to sort an array using Quicksort
 void Quicksort(int list[], int low, int high)
 
 {
@@ -36,30 +37,72 @@ void Quicksort(int list[], int low, int high)
         Quicksort(list, j + 1, high);
     }
 }
-void swap(int *xp, int *yp) 
-{ 
-    int temp = *xp; 
-    *xp = *yp; 
-    *yp = temp; 
-} 
-  
-// A function to implement bubble sort 
-void bubbleSort(int arr[], int n) 
-{ 
-   int i, j; 
-   for (i = 0; i < n-1; i++)       
-  
-       // Last i elements are already in place    
-       for (j = 0; j < n-i-1; j++)  
-           if (arr[j] > arr[j+1]) 
-              swap(&arr[j], &arr[j+1]); 
-} 
-  
-/* Function to print an array */
-void printArray(int arr[], int size) 
-{ 
-    int i; 
-    for (i=0; i < size; i++) 
-        printf("%d ", arr[i]); 
-    printf("\n"); 
-} 
+
+// Function to sort an array using BubbleSort
+void Bubblesort(int list[], int c, int n){
+    int d, swap;
+    for (c = 0 ; c < n - 1; c++)
+    {
+        for (d = 0 ; d < n - c - 1; d++)
+        {
+            if (list[d] > list[d+1]) /* For decreasing order use < */
+                {
+                    swap       = list[d];
+                    list[d]   = list[d+1];
+                    list[d+1] = swap;
+                }
+        }
+    }
+}
+
+// Function to sort an array using InsertionSort
+void Insertionsort(int list[], int c, int n){
+    int d, t, flag = 0;
+   for (c = 1 ; c <= n - 1; c++) {
+    t = list[c];
+
+    for (d = c - 1 ; d >= 0; d--) {
+      if (list[d] > t) {
+        list[d+1] = list[d];
+        flag = 1;
+      }
+      else
+        break;
+    }
+    if (flag)
+      list[d+1] = t;
+  }
+}
+
+// void Mergesort(int array[], int n, int array2[], int n1, int sorted[]) {
+//   int i, j, k;
+
+//   j = k = 0;
+
+//   for (i = 0; i < n + n1;) {
+//     if (j < n && k < n1) {
+//       if (array[j] < array2[k]) {
+//         sorted[i] = array[j];
+//         j++;
+//       }
+//       else {
+//         sorted[i] = array2[k];
+//         k++;
+//       }
+//       i++;
+//     }
+//     else if (j == n) {
+//       for (; i < n + n1;) {
+//         sorted[i] =
+//         i++;
+//       }
+//     }
+//     else {
+//       for (; i < n + n1;) {
+//         sorted[i] = array[j];
+//         j++;
+//         i++;
+//       }
+//     }
+//   }
+// }
