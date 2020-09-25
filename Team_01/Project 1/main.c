@@ -7,12 +7,14 @@ extern void printArray(int *, int);
 extern void insertionSort(int *, int);
 extern void selectionSort(int *, int);
 extern void mergeSort(int *, int, int);
+extern void quicksort(int *, int, int);
 extern void testbinary();
 extern void testbubble();
 extern void testlinear();
 extern void testinsertion();
 extern void testselection();
 extern void testmerge();
+extern void testquick();
 extern int number_comparisons;
 extern int number_swaps;
 
@@ -40,7 +42,7 @@ int main()
     printf("2. Insertion Sort.\n");
     printf("3. Selection Sort.\n");
     printf("4. Merge Sort.\n");
-    //printf("5. Quick Sort.\n");
+    printf("5. Quick Sort.\n");
     printf("Enter Option:");
     scanf("%d", &opt);
     switch (opt)
@@ -75,6 +77,14 @@ int main()
         printf("Sorted array  by merge sort: \n");
         printArray(arr, n);
         printf("Number of Comparisons = %d \nnumber of swaps = %d\n", number_comparisons, number_swaps);
+        break;   
+
+    case 5:
+        testquick();
+        quicksort(arr, 0 , n-1);
+        printf("Sorted array  by quick sort: \n");
+        printArray(arr, n);
+        //printf("Number of Comparisons = %d \nnumber of swaps = %d\n", number_comparisons, number_swaps);
         break;    
 
     default:
