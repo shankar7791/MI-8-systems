@@ -16,3 +16,17 @@ int binarySearch(int arr[], int l, int r, int x)
     }
     return -1;
 }
+
+int linearSearch(int arr[], int n, int search)
+{
+    int c;
+    for (c = 0; c < n; c++)
+    {
+        if (arr[c] == search) /* If required element is found */
+        {
+            return c;
+        }
+    }
+    if (c == n)
+        return -1;
+}
