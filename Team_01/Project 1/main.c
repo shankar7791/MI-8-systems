@@ -34,6 +34,7 @@ int main()
         printf("Enter %d element :", i + 1);
         scanf("%d", &arr[i]);
     }
+    L2:
     printf("Select Option to which method you want to sorting.\n");
     printf("1. Bubble Sort.\n");
     printf("2. Insertion Sort.\n");
@@ -77,12 +78,14 @@ int main()
         break;    
 
     default:
-        printf("Incorrect Option. \n");
-        break;
+        printf("\nIncorrect Option. \n\n");
+        goto L2;
+       // break;
     }
 
     printf("\nEnter Number to search:");
     scanf("%d", &num);
+    L3:
     printf("Select Option to which method you want to searching.\n");
     printf("1. Linear Search.\n");
     printf("2. Binary Search.\n");
@@ -114,8 +117,8 @@ int main()
         break;
 
     default:
-        printf("Incorrect Option. \n");
-        break;
+       printf("\nIncorrect Option. \n\n");
+        goto L3;
     }
 
     return 0;
