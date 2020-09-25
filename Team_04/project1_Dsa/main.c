@@ -14,14 +14,22 @@ int main () {
     }
     
      
-  printf("\n\n===== Quick Sort Result =====\n\n");
+    printf("\n\n===== Quick Sort Result =====\n\n");
     Quicksort(array, 0, n - 1);
+    for (c = 0; c < n; c++)
+    {
+        printf("%d ", array[c]);
+    } 
+    
+    printf("\n\n===== Bubble Sort Result =====\n\n");
+    Bubblesort(array, 0, n - 1);
     for (c = 0; c < n; c++)
     {
         printf("%d ", array[c]);
     }
     
     printf("\n\n===== Search After Sorting ===== \n ");
+
     printf("Please Enter the number you want to find : ");
     scanf("%d", &search);
     
