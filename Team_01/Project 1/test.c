@@ -6,6 +6,7 @@ extern void printArray(int *, int);
 extern void insertionSort(int *, int);
 extern void selectionSort(int *, int);
 extern void mergeSort(int *, int, int);
+extern void quicksort(int *, int, int);
 extern int number_comparisons;
 void testbinary()
 {
@@ -96,8 +97,6 @@ void testinsertion()
     }
 }
 
-
-
 void testselection()
 {
     int arr[] = {50, 30, 60, 10, 80};
@@ -143,5 +142,29 @@ void testmerge()
     else
     {
         printf("In Testcase merge sort Failed. \n");
+    }
+}
+
+void testquick()
+{
+    int arr[] = {50, 30, 60, 10, 80};
+    int i, flag = 0;
+    quicksort(arr, 0, 5 - 1);
+    for (i = 0; i < 5 - 1; i++)
+    {
+        if (arr[i] <= arr[i + 1])
+            ;
+        else
+            flag = 1;
+    }
+
+    if (flag != 1)
+    {
+        printf("In Testcase quick sort Succesed. \n");
+    }
+
+    else
+    {
+        printf("In Testcase quick sort Failed. \n");
     }
 }
