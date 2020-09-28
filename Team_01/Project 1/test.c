@@ -29,7 +29,7 @@ void testbinary()
         printf("In Test Case Binary Search failed.\n");
     }
     else
-        printf("In Test Case Binary Search Succesed. \n");
+        printf("In Test Case Binary Search Succeed. \n");
 }
 
 void testlinear()
@@ -46,7 +46,7 @@ void testlinear()
         printf("In Test Case Linear Search failed.\n");
     }
     else
-        printf("In Test Case Linear Search Succesed. \n");
+        printf("In Test Case Linear Search Succeed. \n");
 }
 
 void testbubble()
@@ -64,7 +64,7 @@ void testbubble()
 
     if (flag != 1 && number_comparisons > 0)
     {
-        printf("In Testcase Bubble sort Succesed. \n");
+        printf("In Testcase Bubble sort Succeed. \n");
     }
 
     else
@@ -88,7 +88,7 @@ void testinsertion()
 
     if (flag != 1 && number_comparisons > 0)
     {
-        printf("In Testcase Insertion sort Succesed. \n");
+        printf("In Testcase Insertion sort Succeed. \n");
     }
 
     else
@@ -112,7 +112,7 @@ void testselection()
 
     if (flag != 1 && number_comparisons > 0)
     {
-        printf("In Testcase selection sort Succesed. \n");
+        printf("In Testcase selection sort Succeed. \n");
     }
 
     else
@@ -136,7 +136,7 @@ void testmerge()
 
     if (flag != 1 && number_comparisons > 0)
     {
-        printf("In Testcase merge sort Succesed. \n");
+        printf("In Testcase merge sort Succeed. \n");
     }
 
     else
@@ -160,7 +160,7 @@ void testquick()
 
     if (flag != 1)
     {
-        printf("In Testcase quick sort Succesed. \n");
+        printf("In Testcase quick sort Succeed. \n");
     }
 
     else

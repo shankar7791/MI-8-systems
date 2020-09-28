@@ -3,7 +3,7 @@
 int number_comparisons = 0;
 int number_swaps = 0;
 
-void swap(int *x, int *y)
+void swap(int *x, int *y)// the function swaps the two elements
 {
     number_swaps++;
     int temp = *x;
@@ -11,6 +11,7 @@ void swap(int *x, int *y)
     *y = temp;
 }
 
+//the printarray function prints the the sorted array and get called in every kind of sort.
 void printArray(int arr[], int n)
 {
     int i;
@@ -19,6 +20,8 @@ void printArray(int arr[], int n)
     printf("\n");
 }
 
+
+//bubblesort function works by repeatedly swapping the adjacent elements if they are in wrong order.
 void bubbleSort(int arr[], int n)
 {
     int i, j;
@@ -31,6 +34,8 @@ void bubbleSort(int arr[], int n)
         }
 }
 
+//in insertion sort the array is virtually split into a sorted and an unsorted part.
+//Values from the unsorted part are picked and placed at the correct position in the sorted part.
 void insertionSort(int arr[], int n)
 {
     int i, j, temp;
@@ -49,6 +54,8 @@ void insertionSort(int arr[], int n)
     }
 }
 
+//selection sort sorts an array by repeatedly finding the minimum element (considering ascending order)
+//from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.
 void selectionSort(int arr[], int n)
 {
     int i, j, temp;
@@ -68,6 +75,8 @@ void selectionSort(int arr[], int n)
     }
 }
 
+
+//The merge() function is used for merging two halves.
 void merge(int arr[], int l, int m, int r)
 {
     int i, j, k;
@@ -120,6 +129,9 @@ void merge(int arr[], int l, int m, int r)
     }
 }
 
+
+//merge sort It divides input array in two halves, 
+//calls itself for the two halves and then merges the two sorted halves. 
 void mergeSort(int arr[], int l, int r)
 {
     if (l < r)
@@ -133,9 +145,14 @@ void mergeSort(int arr[], int l, int r)
     }
 }
 
+
+
+//the partition function used in quicksort
+//the elements less than pivot element will be placed at left side of pivot element and 
+//elements greater than pivot element are placed at right side of pivot element.
 int partition(int arr[], int low, int high)
 {
-	int x = arr[high]; 							//declaration of pivot element
+	int x = arr[high]; 				//declaration of pivot element
 	int i = low-1;
 	for(int j = low; j<= high-1; j++)
 	{
@@ -150,6 +167,10 @@ int partition(int arr[], int low, int high)
 	return i+1;
 }
 
+
+//In quick sort the the function takes last elemrnt as a pivot element. 
+//The pivot element will be places at its correct positon.
+//then array get sorted using partition function
 void quicksort(int arr[], int low, int high)     
 {
 	if (low < high) 
