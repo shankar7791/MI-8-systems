@@ -1,4 +1,8 @@
 #include <stdio.h>
+//the program accepts the array as well as the number user want to search in that array
+//comparing element(want to search) with each element in array one by one
+//if element is found the location of that element gets printed...and if not then user will get the messsage of same
+
 int main()
 {
   int array[100], search, c, n;
