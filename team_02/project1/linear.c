@@ -1,18 +1,23 @@
 #include <stdio.h>
-#define max_size 5
-void linear_search(int array[],int element)
-
+int linearsearch(int arr[],int n,int x)
 {
   int i;
-  for(i=0;i<max_size;i++)
-  {
-    if(array[i]==element)
-    {
-      printf("linear search:%d is found at array: %d.\n",element,i+1);
-      break;
-    }
-  }
-  if(i==max_size)
-  printf("search element :%d :not found\n",element);
+  for(i =0;i < n;i++)
+   if(arr[i]== x)
+   return i;
+  return -1;
+}
 
+int binarysearch (int arr[],int l,int r,int x)
+{
+  if(r >= l){
+    int mid =l + (r - l)/2;
+    if (arr[mid] == x)
+     return mid;
+     if (arr[mid]>x)
+     return binarysearch(arr, l,mid-1,x);
+     return binarysearch(arr, mid+1,r,x);
+
+  }
+  return -1;
 }
