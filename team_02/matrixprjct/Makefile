@@ -1,20 +1,15 @@
-
 # the name of the target program
-TARGET = result
-# TARGET1 = client
+TARGET = mtrx
 
 # other source files and the associated object files (this can be blank)
- SRC =  main.c search.c sort.c test.c
-#  SRC1 =  menu.c
- OBJ = $(SRC:.c=.o)
-#  OBJ1 = $(SRC1:.c=.o)
+SRC	= disp.c data.c main.c mul.c
+OBJ	= $(SRC:.c=.o)
 
 # special include directories
 INCLUDE = -I.
 
 # special libraries (none for now)
-LIB = 
-# LIB	= -pthread
+LIB	=
 
 # select the compiler and flags
 CC = /usr/bin/gcc
@@ -27,23 +22,16 @@ CFLAGS = -g
 	$(CC) $(CFLAGS) $(INCLUDE) -c $<
 
 # if you type 'make' without arguments, this is the default
-build: $(TARGET) #$(TARGET1)
+build: $(TARGET)
 
 # specify how to compile the target
-
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) $(INCLUDE)  $(OBJ) $(LIB) -o $(TARGET)
-# $(TARGET1): $(OBJ1)
-# 	$(CC) $(CFLAGS) $(INCLUDE)  $(OBJ1) $(LIB) -o $(TARGET1)
+
 # remove binaries
 clean:
-	rm -f $(OBJ) $(TARGET) #$(OBJ1) $(TARGET1)
-# echo "clean all"
-<<<<<<< HEAD
+	rm -f $(OBJ) $(TARGET)
 
-=======
-	
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
 # remove binaries and other junk
 clobber:
 	make clean

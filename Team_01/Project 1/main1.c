@@ -1,13 +1,8 @@
+//in the program accepts the array form user and sort that array in the type sorting technique of user wants use.
+//as well as the program can search any element the user want to search in an array. 
 #include <stdio.h>
 #include <stdlib.h>
 extern int binarySearch(int *, int, int, int);
-<<<<<<< HEAD
-extern void bubbleSort(int *, int);
-extern void printArray(int *, int);
-extern void testbinary();
-extern void insertionSort(int *, int);
-extern void testbubble();
-=======
 extern int linearSearch(int *, int, int);
 extern void bubbleSort(int *, int);
 extern void printArray(int *, int);
@@ -22,37 +17,31 @@ extern void testinsertion();
 extern void testselection();
 extern void testmerge();
 extern void testquick();
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
 extern int number_comparisons;
 extern int number_swaps;
 
 int main()
 {
     int arr[100];
-    int n, i, num, a, opt, opt1;
-<<<<<<< HEAD
+    int n =1;
+    int i, num, a, opt, opt1;
+    
     printf("\nEnter how many number to Sort:\n");
     scanf("%d", &n);
-=======
-    L1: 
-    printf("\nEnter how many number to Sort:\n");
-    scanf("%d", &n);
-    if(n<=0)
+
+    while((n!=0) && (n>0))
     {
         printf("Array size must be positive.\n");
-        goto L1;
+        break;
     }
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
     printf("Enter Numbers:\n");
     for (i = 0; i < n; i++)
     {
         printf("Enter %d element :", i + 1);
         scanf("%d", &arr[i]);
     }
-<<<<<<< HEAD
-=======
-    L2:
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
+    
+    while(1){
     printf("Select Option to which method you want to sorting.\n");
     printf("1. Bubble Sort.\n");
     printf("2. Insertion Sort.\n");
@@ -61,10 +50,11 @@ int main()
     printf("5. Quick Sort.\n");
     printf("Enter Option:");
     scanf("%d", &opt);
+    
     switch (opt)
     {
     case 1:
-        testbubble();
+        testbubble();                                                       
         bubbleSort(arr, n);
         printf("Sorted array  by Bubble sort: \n");
         printArray(arr, n);
@@ -72,23 +62,13 @@ int main()
         break;
 
     case 2:
-<<<<<<< HEAD
-        insertionSort(arr, n);
-        printf("Sorted array  by Bubble sort: \n");
-=======
         testinsertion();
         insertionSort(arr, n);
         printf("Sorted array  by Insertion sort: \n");
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
         printArray(arr, n);
         printf("Number of Comparisons = %d \nnumber of swaps = %d\n", number_comparisons, number_swaps);
         break;
 
-<<<<<<< HEAD
-    default:
-        printf("Incorrect Option. \n");
-        break;
-=======
     case 3:
         testselection();
         selectionSort(arr, n);
@@ -106,26 +86,24 @@ int main()
         break;   
 
     case 5:
-        testquick();
+        testquick();                                                                   
         quicksort(arr, 0 , n-1);
         printf("Sorted array  by quick sort: \n");
         printArray(arr, n);
-        //printf("Number of Comparisons = %d \nnumber of swaps = %d\n", number_comparisons, number_swaps);
-        break;    
+        printf("Number of Comparisons = %d \nnumber of swaps = %d\n", number_comparisons, number_swaps);
+        break;   
 
     default:
         printf("\nIncorrect Option. \n\n");
-        goto L2;
-       // break;
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
+        //goto 2
+       break;
     }
+}
 
     printf("\nEnter Number to search:");
     scanf("%d", &num);
-<<<<<<< HEAD
-=======
-    L3:
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
+    
+    while(1) {
     printf("Select Option to which method you want to searching.\n");
     printf("1. Linear Search.\n");
     printf("2. Binary Search.\n");
@@ -133,9 +111,6 @@ int main()
     scanf("%d", &opt1);
     switch (opt1)
     {
-<<<<<<< HEAD
-=======
-
     case 1:
         testlinear();
         a = linearSearch(arr, n, num);
@@ -147,7 +122,6 @@ int main()
             printf("Number is found at %d Position.\n", a + 1);
         break;
 
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
     case 2:
         testbinary();
         a = binarySearch(arr, 0, n, num);
@@ -160,14 +134,11 @@ int main()
         break;
 
     default:
-<<<<<<< HEAD
-        printf("Incorrect Option. \n");
-        break;
-=======
+
        printf("\nIncorrect Option. \n\n");
-        goto L3;
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
+       break;
     }
+}
 
     return 0;
 }

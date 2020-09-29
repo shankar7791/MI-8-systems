@@ -1,4 +1,11 @@
 #include <stdio.h>
+<<<<<<< HEAD
+=======
+//the program accepts the array as well as the number user want to search in that array
+//comparing element(want to search) with each element in array one by one
+//if element is found the location of that element gets printed...and if not then user will get the messsage of same
+
+>>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
 int main()
 {
   int array[100], search, c, n;
@@ -26,4 +33,8 @@ int main()
     printf("%d isn't present in the array.\n", search);
 
   return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e

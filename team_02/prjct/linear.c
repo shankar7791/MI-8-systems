@@ -1,6 +1,6 @@
 #include <stdio.h>
-#define max_size 5
-void linear_search(int array[],int element)
+#define max_size 20
+void linear_search(int array[],int element,int r,int r1)
 
 {
   int i;
@@ -14,5 +14,5 @@ void linear_search(int array[],int element)
   }
   if(i==max_size)
   printf("search element :%d :not found\n",element);
-
+  return -1;
 }
