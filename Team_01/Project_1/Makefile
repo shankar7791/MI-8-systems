@@ -39,11 +39,8 @@ $(TARGET): $(OBJ)
 clean:
 	rm -f $(OBJ) $(TARGET) #$(OBJ1) $(TARGET1)
 # echo "clean all"
-<<<<<<< HEAD
 
-=======
 	
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
 # remove binaries and other junk
 clobber:
 	make clean

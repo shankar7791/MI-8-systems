@@ -16,8 +16,6 @@ int binarySearch(int arr[], int l, int r, int x)
     }
     return -1;
 }
-<<<<<<< HEAD
-=======
 
 //the program accepts the array as well as the number user want to search in that array
 //comparing element(want to search) with each element in array one by one
@@ -35,4 +33,3 @@ int linearSearch(int arr[], int n, int search)
     if (c == n)
         return -1;
 }
->>>>>>> fe9e42563cef1a0c4b6bce0b68cd21bec1949c8e
