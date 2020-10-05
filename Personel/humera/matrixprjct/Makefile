@@ -1,10 +1,8 @@
-
-
 # the name of the target program
-TARGET = dsa
+TARGET = mtrx
 
 # other source files and the associated object files (this can be blank)
-SRC	= binary.c main.c
+SRC	= disp.c data.c main.c mul.c
 OBJ	= $(SRC:.c=.o)
 
 # special include directories

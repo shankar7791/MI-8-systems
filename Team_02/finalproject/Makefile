@@ -1,10 +1,8 @@
-
-
 # the name of the target program
-TARGET = dsa
+TARGET = pjct
 
 # other source files and the associated object files (this can be blank)
-SRC	= binary.c main.c
+SRC	= main.c allsort.c blsearch.c test.c
 OBJ	= $(SRC:.c=.o)
 
 # special include directories

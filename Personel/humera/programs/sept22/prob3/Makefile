@@ -1,10 +1,8 @@
-
-
 # the name of the target program
-TARGET = dsa
+TARGET = prob3
 
 # other source files and the associated object files (this can be blank)
-SRC	= binary.c main.c
+SRC	= prob3.c prob3-func.c
 OBJ	= $(SRC:.c=.o)
 
 # special include directories
