@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int number_comparisons=0, number_swap=0;
+
 //the printarray function prints the the sorted array and get called in every kind of sort.
 void printArray(int arr[], int n)
 {
@@ -9,8 +11,15 @@ void printArray(int arr[], int n)
         printf("%d  ", arr[i]);
     printf("\n");
 }
+/*swap logic */
 
+ void swap(int *x, int *y)
+{
+  int swap= *x;
+   *x= *y;
+   *y= swap;
 
+}
 //bubblesort function works by repeatedly swapping the adjacent elements if they are in wrong order.
 
 void bubbleSort(int arr[], int n)
@@ -37,7 +46,7 @@ void insertionSort(int arr[], int n)
         number_comparisons++;
         while (j >= 0 && arr[j] > temp)
         {
-            number_swaps++;
+            number_swap++;
             arr[j + 1] = arr[j];
             j = j - 1;
         }

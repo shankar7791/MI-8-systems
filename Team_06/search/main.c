@@ -6,6 +6,7 @@ extern void bubbleSort(int *, int);
 extern void printArray(int *, int);
 extern void insertionSort(int *, int);
 
+
 void
 main ()
 {
@@ -67,7 +68,7 @@ main ()
        }
 
 
-    while (1)
+
         {
             printf("Select Option u want to search.\n");
             printf("1.Binary search .\n");

@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int binarySearch(int a[], int beg, int end, int num)
 {
     int mid;
