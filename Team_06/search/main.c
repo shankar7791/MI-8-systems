@@ -2,6 +2,10 @@
 
 extern int binarySearch(int *, int, int, int);
 extern int linearSearch(int *, int, int);
+extern void bubbleSort(int *, int);
+extern void printArray(int *, int);
+extern void insertionSort(int *, int);
+
 void
 main ()
 {
@@ -30,7 +34,37 @@ main ()
           scanf("%d", &arr[i]);
       }
 
+      while (1)
+         {
+             printf("Select Option to which method you want to sorting.\n");
+             printf("1. Bubble Sort.\n");
+             printf("2. Insertion Sort.\n");
+             printf("Enter Option:");
+             scanf("%d", &opt);
 
+             switch (opt)
+       {
+       case 1:
+           bubbleSort(arr, n);
+           printf("Sorted array  by Bubble sort: \n");
+           printArray(arr, n);
+           break;
+
+       case 2:
+           insertionSort(arr, n);
+           printf("Sorted array  by Insertion sort: \n");
+           printArray(arr, n);
+           break;
+
+           default:
+               printf("\nIncorrect Option. \n\n");
+               break;
+           }
+           if (0 < opt && opt < 6)
+           {
+               break;
+           }
+       }
 
 
     while (1)
