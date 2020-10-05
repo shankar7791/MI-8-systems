@@ -1,10 +1,8 @@
-
-
 # the name of the target program
 TARGET = dsa
 
 # other source files and the associated object files (this can be blank)
-SRC	= binary.c main.c sort.c
+SRC	=  main.c sorting.c
 OBJ	= $(SRC:.c=.o)
 
 # special include directories

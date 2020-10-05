@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-extern int binarySearch(int *, int, int, int);
-extern int linearSearch(int *, int, int);
-extern void bubbleSort(int *, int);
-extern void printArray(int *, int);
-extern void insertionSort(int *, int);
+int binarySearch(int *, int, int, int);
+int linearSearch(int *, int, int);
+void bubbleSort(int *, int);
+void printArray(int *, int);
+void insertionSort(int *, int);
 
 void
 main ()
