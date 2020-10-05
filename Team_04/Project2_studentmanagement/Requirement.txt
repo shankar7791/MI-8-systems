@@ -1,0 +1,16 @@
+# Functional Requirements
+
+ 1.Creation of new record:This function should creates the record of the students. 
+ 2.Deletion of new records:This function should delete the record of the students whenever  we want.
+ 3.Updating of record:This function should be use to update the data whichever will be added newly.
+ 4.Searching of records:This function should help the user to search the required information.
+ 5.Display of data in records:This function should show the required data we have searched for.
+
+ # Non-functional Requirements
+
+1.Security:1.1 Only authorized users should be able to access the data or system.
+           1.2 It should show dailouge box that the user is unauthorised whenever unwanted person tries to access.
+2.Performance: 2.1 The process of updating,deleting,etc. should be done in minimum time.
+               2.2 It should be able to access large amount of data.
+3.Maintainabilty:3.1 Backups for database should be available.
+                 3.2 Data should not be lost if the user got logged off suddenly.

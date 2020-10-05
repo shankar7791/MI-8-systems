@@ -1,7 +1,7 @@
 
 
 # the name of the target program
-TARGET = scm
+TARGET = dsa
 
 # other source files and the associated object files (this can be blank)
 SRC	= binary.c main.c
