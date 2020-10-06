@@ -4,7 +4,11 @@
 TARGET = dsa
 
 # other source files and the associated object files (this can be blank)
-SRC	= binary.c main.c
+<<<<<<< HEAD
+SRC	= binary.c main.c sort.c
+=======
+SRC	=  main.c lbsearch.c
+>>>>>>> 0d5e769700eff2abdd092a56e4f6850c19b62078
 OBJ	= $(SRC:.c=.o)
 
 # special include directories

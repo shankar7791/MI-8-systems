@@ -1,23 +1,87 @@
 #include <stdio.h>
 
-int binarySearch(int[], int, int, int);
+<<<<<<< HEAD
+int binarySearch(int *, int, int, int);
+int linearSearch(int *, int, int);
+void bubbleSort(int *, int);
+void printArray(int *, int);
+void insertionSort(int *, int);
+
 void
 main ()
-{
-    int arr[10] = {11, 22, 33, 44, 55, 66, 77, 88, 99, 100};
-    int item, location=-1;
-  
-    printf(" Enter element u want to search ");
-    scanf("%d", &item);
+=======
 
-    location = binarySearch(arr, 0, 9, item);
-    if(location != -1)
+int main()
+>>>>>>> 0d5e769700eff2abdd092a56e4f6850c19b62078
+{
+
+/* Declare variables - array_of_number,search_key,i,j,low,high*/
+
+    int array[100],search_key,i,j,n,low,high,location,choice;
+
+    void linear_search(int search_key,int array[100],int n);
+
+    void binary_search(int search_key,int array[100],int n);
+
+
+
+/* read the elements of array */
+
+    printf("ENTER THE SIZE OF ELEMENTS:");
+
+    scanf("%d", &n);
+
+    printf("ENTER THE ELEMENTS:\n");
+
+    for(i=1; i <= n; i++)
     {
-        printf(" element found at location %d ", location);
+
+        scanf("%d", &array[i]);
+
     }
-    else
+
+/* Get the Search Key element for Linear Search */
+
+    printf("ENTER THE ELEMENT U WANT SEARCH:");
+
+    scanf("%d", &search_key);
+
+/* Choice of Search Algorithm */
+
+    printf("  --------------  \n");
+
+    printf("1.LINEAR SEARCH\n");
+
+    printf("2.BINARY SEARCH\n");
+
+    printf("   ------------------ \n");
+
+    printf("ENTER YOUR CHOICE:");
+
+    scanf("%d", &choice);
+
+    switch(choice)
     {
-        printf(" element not found ");
-    }
+
+    case 1:
+
+        linear_search(search_key,array,n);
+
+        break;
+
+    case 2:
+
+        binary_search(search_key,array,n);
+
+        break;
+
+    default:
+
+        printf(" INVALID ELEMENT");
+
+}
+
+
+    return 0;
 
 }
