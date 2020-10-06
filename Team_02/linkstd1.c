@@ -115,13 +115,14 @@ void Delete(int rollnumber)
 void display()
 {
     struct Student * temp = head;
+	printf("=============================================\n");
+	printf("Roll.No\tName\tPhone no\tpercentage\n");
+	printf("=============================================\n");
 	while(temp!=NULL){
 		
-		printf("Roll Number: %d\n", temp->rollnumber);
-		printf("Name: %s\n", temp->name);
-		printf("Phone: %s\n", temp->phone);
-		printf("Percentage: %0.4f\n\n", temp->percentage);
+		printf("%d\t%s\t%s\t%0.4f\n",temp->rollnumber,temp->name,temp->phone,temp->percentage);
 		temp = temp->next;
+
 		
 	}
 }
@@ -135,9 +136,10 @@ int main()
     int rollnumber;
     float percentage;
 
-    printf("1 to insert student details\n2 to search for student details\n3 to delete student details\n4 to update student details\n5 to display all student details\n 0 to exit");
     do
     {
+		printf("1.To Insert\n2.To Search \n3.To Delete\n4.To Update\n5.To Display\n0.To Exit");
+
         printf("\nEnter Choice: ");
         scanf("%d", &choice);
         switch (choice)
