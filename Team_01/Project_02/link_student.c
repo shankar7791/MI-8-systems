@@ -6,12 +6,13 @@
 void help();
 void append();
 void display();
-struct node *del(int);
+void del();
 int checkdate(int, int, int);
 void update();
 void search();
+int length();
 
-struct node
+struct node //Define Struct
 {
 	char name[80];
 	int dd, mm, yy;
@@ -23,47 +24,46 @@ struct node
 
 int main()
 {
-	char cmd;
+	char cmd[50];
 	int c, pos, no1, i;
 	char inst;
-	help();
+	help(); //Give choice to user
 	while (1)
 	{
 		printf("\n[COMMAND PROMPT]$");
-		scanf("%c",&cmd);
-		switch (cmd)
+		fgets(cmd, 50, stdin);
+		c = sscanf(cmd, "%c", &inst); //Accept User Choice
+		switch (inst)
 		{
 		case 'a':
 		case 'A':
-			append();
+			append(); //Add function call
 			break;
 		case 'P':
 		case 'p':
-			display();
+			display(); //Display function call
 			break;
 
 		case 'e':
-			exit(0);
+			exit(0); //Exit function call
 
 		case 'd':
 		case 'D':
-			printf("\nEnter Roll number to delete:");
-			scanf("%d", &no1);
-			del(no1);
+			del(); //Delete function call
 			break;
 
 		case 'u':
 		case 'U':
-			update();
+			update(); //Update function call
 			break;
 
 		case 's':
 		case 'S':
-			search();
+			search(); //Search function call
 			break;
 		case 'h':
 		case 'H':
-			help();
+			help(); //help function call
 			break;
 		default:
 			help();
@@ -78,32 +78,40 @@ int main()
 void append()
 {
 	struct node *t, *s;
-	int i, n, m;
+	int i, m, x;
+	char n[10], dd[10], mm[10], yy[10];
 
 	printf("Enter How Many Records you want of students: ");
-	scanf("%d", &n);
+	fgets(n, 10, stdin);
+	x = atoi(n); //convert string to integer
+	printf("%d", x);
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < x; i++)
 	{
 		fflush(stdin);
-		t = newnode;
+		t = newnode; //Alocated memory for link list node
 		t->rollno = i + 1;
 		printf("Enter student information Roll Number %d:", i + 1);
 		printf("\nEnter Name:");
 		fgets(t->name, 80, stdin);
-		fgets(t->name, 80, stdin);
-
 		do
 		{
-			printf("\nEnter BirthDate (formate: dd/mm/yy):");
-			scanf("%d%d%d", &t->dd, &t->mm, &t->yy);
+			printf("\nFor BirthDate:");
+			printf("\nEnter Day:");
+			fgets(dd, 10, stdin);
+			printf("\nEnter Month:");
+			fgets(mm, 10, stdin);
+			printf("\nEnter Year:");
+			fgets(yy, 10, stdin);
+			t->dd = atoi(dd);
+			t->mm = atoi(mm);
+			t->yy = atoi(yy);
 			m = checkdate(t->dd, t->mm, t->yy);
 		} while (m);
 
 		printf("\nEnter class:");
-		scanf("%s", t->class);
+		fgets(t->class, 5, stdin);
 		printf("\nEnter Address:");
-		fgets(t->add, 80, stdin);
 		fgets(t->add, 80, stdin);
 		printf("\n");
 		t->next = NULL;
@@ -119,36 +127,55 @@ void append()
 			s->next = t;
 		}
 	}
+
 	printf("\nAPPENDED");
 }
 
-struct node *del(int pos)
+void del()
 {
-	int i;
-	struct node *t, *s = head;
+	int i, pos = 0, x, cnt = 0, flag = 0;
+	struct node *t = head, *s = head;
+	printf("\nEnter Roll number to delete:");
+	scanf("%d", &x);
 	if (head == NULL)
 		printf("\nAppend First\n");
 	else
 	{
-		if (pos == 1)
+		while (t != NULL)
 		{
-			t = head;
-			head = t->next;
-			free(t);
-		}
-		else
-		{
-			for (i = 0; i < pos - 2; i++, s = s->next)
-				;
+			pos=pos+1;
+			if (t->rollno == x)
+			{
+				flag = 1;
+				if (pos == 1)
+				{
+					t = head;
+					head = t->next;
+					free(t);
+					printf("\nDELETED\n");
+				}
+				else
+				{
+					for (i = 0; i < pos - 2; i++, s = s->next)
+						;
+					
 
-			t = s->next;
-			s->next = s->next->next;
-			free(t);
+					t = s->next;
+					s->next = s->next->next;
+					free(t);
+					printf("\nDELETED\n");
+					
+				}
+			}
+			t = t->next;
 		}
-	printf("\nDELETED\n");
+		if (flag == 0)
+		{
+			printf("\nInvalid Roll Number\n");
+		}
+
+		
 	}
-	
-	return head;
 }
 
 void display()
@@ -164,11 +191,11 @@ void display()
 			printf("%d", s->rollno);
 			printf("\nName:");
 			printf("%s", s->name);
-			printf("\nBirthDate (formate: dd/mm/yy):");
+			printf("BirthDate (formate: dd/mm/yy):");
 			printf("%d/%d/%d", s->dd, s->mm, s->yy);
 			printf("\nClass:");
 			printf("%s", s->class);
-			printf("\nAddress:");
+			printf("Address:");
 			printf("%s", s->add);
 			printf("\n");
 
@@ -179,14 +206,14 @@ void display()
 
 int checkdate(int dd, int mm, int yy)
 {
-	if (dd > 0 && dd < 32 && mm > 0 && mm < 13 && yy > 2000 && yy < 2020)
+	if (dd > 0 && dd < 32 && mm > 0 && mm < 13 && yy > 1990 && yy < 2020)
 	{
 
-		return 0;
+		return 0; //check date in formate
 	}
 	else
 	{
-		printf("\nInvalide Date !");
+		printf("\nInvalide Date !\n");
 		return 1;
 	}
 }
@@ -194,7 +221,7 @@ int checkdate(int dd, int mm, int yy)
 void update()
 {
 	struct node *s = head;
-	int i, x, m, flag=0;
+	int i, x, m, flag = 0;
 	char ch;
 
 	printf("\nEnter Roll Number to update student data:");
@@ -203,7 +230,8 @@ void update()
 	while (s != NULL)
 	{
 		if (s->rollno == x)
-		{	flag=1;
+		{
+			flag = 1;
 			printf("\nWhich data you want to update:");
 			printf("\nr Roll Number\nn Name \nd BirthDate \nc Class\na Address\n");
 			printf("Enter Choice:");
@@ -246,11 +274,11 @@ void update()
 				fgets(s->add, 80, stdin);
 				break;
 			}
+			printf("\nUPDATED\n");
 		}
 		s = s->next;
-		printf("\nUPDATED\n");
 	}
-	if (flag==0)
+	if (flag == 0)
 	{
 		printf("\nInvalid Roll Number\n");
 	}
@@ -259,8 +287,7 @@ void update()
 void search()
 {
 	struct node *s = head;
-	int x, flag=0;
-	
+	int x, flag = 0;
 
 	printf("\nEnter Roll Number to Search student data:");
 	scanf("%d", &x);
@@ -268,8 +295,8 @@ void search()
 	while (s != NULL)
 	{
 		if (s->rollno == x)
-		{	
-			flag=1;
+		{
+			flag = 1;
 			printf("\nRollno:");
 			printf("%d", s->rollno);
 			printf("\nName:");
@@ -280,17 +307,26 @@ void search()
 			printf("%s", s->class);
 			printf("\nAddress:");
 			printf("%s", s->add);
-			printf("\n");		
-				
+			printf("\n");
 		}
 		s = s->next;
 	}
-	if (flag==0)
+	if (flag == 0)
 	{
 		printf("\nInvalid Roll Number\n");
 	}
 }
 
+int length()
+{
+	struct node *s;
+	int tcnt;
+	if (head == NULL)
+		return 0;
+	for (s = head; s != NULL; s = s->next)
+		tcnt++;
+	return tcnt;
+}
 void help()
 {
 	printf("\nCMD OPERATION \na   Add\nd   Delete\np   Print\nu   Update\ns   Search\ne   Exit");
