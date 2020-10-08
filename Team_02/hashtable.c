@@ -22,10 +22,10 @@ void init()
 void insert(int value)
 {
     int key=value%size;
-    if array[key]=-1
+    if (array[key]=1)
     array[key]=value;
     printf("\n%d has been inserted\n",key);
-    else if
+    else
     {
         printf("\n key (%d)already present ,updating value\n",key);
     }
@@ -37,8 +37,8 @@ void insert(int value)
 void delete(int value)
 {
     int key= (value % size);
-    if array[key]==1
-    array[key]=-1;
+    if (array[key]=1)
+    array[key]==1;
     else
     {
         printf("% donot present in hash table\n",value);
@@ -49,9 +49,10 @@ void delete(int value)
 void search(int value)
 {
     int i;
+    int key= (value % size);
     for(i=0;i<size;i++)
     {
-        if array[key]==0;
+        if (array[key]==0);
         {
             printf("Search found \n");
         }
@@ -69,6 +70,7 @@ void print()
 {
      
      int i;
+     int key= (value % size);
      for(i=0;i<size;i++)
      int_array[key];
 }
