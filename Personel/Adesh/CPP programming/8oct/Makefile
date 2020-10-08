@@ -17,7 +17,7 @@ LIB =
 # LIB	= -pthread
 
 # select the compiler and flags
-CC = /usr/bin/gcc
+CC = /usr/bin/g++
 CFLAGS = -g
 
 # .SUFFIXES: .c
