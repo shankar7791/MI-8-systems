@@ -4,7 +4,7 @@ TARGET = inout
 # TARGET1 = client
 
 # other source files and the associated object files (this can be blank)
- SRC =  inout.cpp
+ SRC =  string.cpp
 #  SRC1 =  menu.c
  OBJ = $(SRC:.c=.o)
 #  OBJ1 = $(SRC1:.c=.o)
