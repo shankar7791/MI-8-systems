@@ -3,11 +3,11 @@ using namespace std;
 
 int main()
 {
-    string str1("AmberSoft Tech ");
+    string str1("AmberSoft Pune ");
 
     string str2(str1);
 
-    string str3(7, '@');
+    string str3(7, '$');
 
     string str4(str1, 10, 4);
     string str5(str2.begin(), str2.begin() + 10);
@@ -26,11 +26,11 @@ int main()
         cout << "Strings are unequal\n";
     cout << endl;
 
-    cout << "First occurrence of \"Tech\" starts from : ";
-    cout << str1.find("Tech") << endl;
+    cout << "First occurrence of \"Pune\" starts from : ";
+    cout << str1.find("Pune") << endl;
     cout << endl;
 
-    str2.insert(15, "Pune ");
+    str2.insert(10, "Tech ");
     cout << "Insert String: " << str2 << endl;
     cout << endl;
 
