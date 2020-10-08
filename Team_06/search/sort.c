@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int number_comparisons , number_swaps;
+
 //the printarray function prints the the sorted array and get called in every kind of sort.
 void printArray(int arr[], int n)
 {
     int i;
+
     for (i = 0; i < n; i++)
         printf("%d  ", arr[i]);
     printf("\n");
@@ -16,14 +19,17 @@ void printArray(int arr[], int n)
 void bubbleSort(int arr[], int n)
 {
     int i, j;
-    for (i = 0; i < n - 1; i++)
+    for (i = 0; i < n; i++)
         for (j = 0; j < n - i - 1; j++)
         {
             number_comparisons++;
-            if (arr[j] > arr[j + 1])
-                swap(&arr[j], &arr[j + 1]);
+            if(arr[j] > arr[j + 1])
+            swap(&arr[j],&arr[j+1]);
+
         }
 }
+
+
 
 //in insertion sort the array is virtually split into a sorted and an unsorted part.
 //Values from the unsorted part are picked and placed at the correct position in the sorted part.
@@ -43,4 +49,12 @@ void insertionSort(int arr[], int n)
         }
         arr[j + 1] = temp;
     }
+}
+
+
+void swap(int arr[] ,int [])
+
+{
+
+
 }

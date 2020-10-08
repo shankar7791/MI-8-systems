@@ -1,8 +1,8 @@
 # the name of the target program
-TARGET = scm
+TARGET = dsa
 
 # other source files and the associated object files (this can be blank)
-SRC	= multi.c main.c
+SRC	=  main.c sorting.c
 OBJ	= $(SRC:.c=.o)
 
 # special include directories

@@ -1,0 +1,17 @@
+//1. int_db
+
+//2. add_student
+
+//3. update_student
+
+//4. list_student
+
+//5. Delete_student
+
+//main.c
+
+//student.c
+
+//test_case.txt(manual case definition)
+
+//test_case.c

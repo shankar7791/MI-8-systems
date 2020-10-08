@@ -1,11 +1,11 @@
 
 
 # the name of the target program
-TARGET = dsa
+TARGET = link
 
 # other source files and the associated object files (this can be blank)
 <<<<<<< HEAD
-SRC	= binary.c main.c sort.c
+SRC	= student.c
 =======
 SRC	=  main.c lbsearch.c
 >>>>>>> 0d5e769700eff2abdd092a56e4f6850c19b62078

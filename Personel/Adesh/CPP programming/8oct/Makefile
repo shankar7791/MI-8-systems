@@ -1,10 +1,10 @@
 
 # the name of the target program
-TARGET = result
+TARGET = inout
 # TARGET1 = client
 
 # other source files and the associated object files (this can be blank)
- SRC =  main.c search.c sort.c test.c
+ SRC =  string.cpp
 #  SRC1 =  menu.c
  OBJ = $(SRC:.c=.o)
 #  OBJ1 = $(SRC1:.c=.o)
@@ -17,7 +17,7 @@ LIB =
 # LIB	= -pthread
 
 # select the compiler and flags
-CC = /usr/bin/gcc
+CC = /usr/bin/g++
 CFLAGS = -g
 
 # .SUFFIXES: .c
