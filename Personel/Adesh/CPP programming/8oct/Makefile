@@ -1,6 +1,6 @@
 
 # the name of the target program
-TARGET = inout
+TARGET = string
 # TARGET1 = client
 
 # other source files and the associated object files (this can be blank)
