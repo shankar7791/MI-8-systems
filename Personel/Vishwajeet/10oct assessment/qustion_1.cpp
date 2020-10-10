@@ -1,5 +1,3 @@
-/*Program to print the Lucas series for n terms.*/
-
 #include <iostream>
 using namespace std;
 
