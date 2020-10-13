@@ -1,43 +1,43 @@
 
 # the name of the target program
-TARGET = string
-# TARGET1 = client
+TARGET = string 
+TARGET1 = inout
 
 # other source files and the associated object files (this can be blank)
- SRC =  string.cpp
-#  SRC1 =  menu.c
+ SRC =  string.cpp 
+ SRC1 =  inout.cpp
  OBJ = $(SRC:.c=.o)
-#  OBJ1 = $(SRC1:.c=.o)
+ OBJ1 = $(SRC1:.c=.o)
 
 # special include directories
 INCLUDE = -I.
 
 # special libraries (none for now)
 LIB = 
-# LIB	= -pthread
+LIB	= -pthread
 
 # select the compiler and flags
 CC = /usr/bin/g++
 CFLAGS = -g
 
-# .SUFFIXES: .c
+ .SUFFIXES: .c
 
 # specify how to compile the .c files
 .c.o:
 	$(CC) $(CFLAGS) $(INCLUDE) -c $<
 
 # if you type 'make' without arguments, this is the default
-build: $(TARGET) #$(TARGET1)
+build: $(TARGET) $(TARGET1)
 
 # specify how to compile the target
 
 $(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) $(INCLUDE)  $(OBJ) $(LIB) -o $(TARGET)
-# $(TARGET1): $(OBJ1)
-# 	$(CC) $(CFLAGS) $(INCLUDE)  $(OBJ1) $(LIB) -o $(TARGET1)
+	$(CC) $(CFLAGS) $(INCLUDE)  $(OBJ) $(LIB) -o $(TARGET) 
+ $(TARGET1): $(OBJ1)
+ 	$(CC) $(CFLAGS) $(INCLUDE)  $(OBJ1) $(LIB) -o $(TARGET1)
 # remove binaries
 clean:
-	rm -f $(OBJ) $(TARGET) #$(OBJ1) $(TARGET1)
+	rm -f $(OBJ) $(TARGET) $(OBJ1) $(TARGET1)
 # echo "clean all"
 
 	
