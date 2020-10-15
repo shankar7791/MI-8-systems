@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<bits/stdc++.h>
 #include<vector>
 #include<array>
 using namespace std;
@@ -7,48 +8,35 @@ class animal
 {
     string name;
     string cls;
-    string data;
-    string rn;
-    int n;
-    vector <string> myvector;
+    vector<animal>an;
     public:
     void getdata()
     {     
         cout<<"name:";
         cin>>name;
-        myvector.push_back(name);
         cout<<"class:";
         cin>>cls;
-        myvector.push_back(cls);
-        data=name+" "+cls;
-        myvector.push_back(data);        
     }
     void display()
     {
         cout<<"name:"<<name<<endl;
         cout<<"class:"<<cls<<endl;
-        cout<<"data:"<<data<<endl;
-
     }
-    void deletedata()
+    void insert()
     {
-       cout<<"please enter data to be deleted:";
-       cin>>rn;
-       for(int i=0;myvector.size();i++)
-       {
-           if(myvector[i].find(rn)!=std::string::npos)
-           myvector.erase(myvector.begin()+i);
-           break;       
-       }
-       cout<<"data is deleted";
+           cout<<"enter the name to insert:";
+           cin>>name;
+           cout<<"enter the class :";
+           cin>>cls;
+           cout<<"\ndata is updated\n";
     }
 };
 class dog:public animal
 {
     string type;
     string food;
-    string ad;
-    vector <string> adog;
+    int i;
+    vector<dog>dg1;
     public:
     void getdata()
     {
@@ -57,41 +45,61 @@ class dog:public animal
         cin>>type;
         cout<<"food(omnivorous/carnivorous):";
         cin>>food;
-        ad=type+"   "+food;
-        adog.push_back(ad);
     }
     void display()
     {
         animal::display();
         cout<<"domestic/wild:"<<type<<endl;
         cout<<"food:"<<food<<endl;
-        cout<<"data:"<<ad<<endl;
+        for(i=0;i<dg1.size();i++)
+        {
+            dg1[i].display();
+        }
     }
-    void deletedata()
+    void insert()
     {
-        adog.clear();
-        cout<<"\ndata is deleted for dog\n";
+       animal::insert();
+       cout<<"enter domestic/wild:";
+       cin>>type;
+       cout<<"food:";
+       cin>>food;
+       cout<<"data is updated";
     }
 };
 class lion:public animal
 {
     string mammal;
+    int i;
+    vector<lion>l1;
     public:
     void getdata()
     {
         animal::getdata();
         cout<<"king of beast(yes/no):";
-        cin>>mammal;   
+        cin>>mammal;       
     }
     void dispaly()
     {
         animal::display();
         cout<<"king of beast:"<<mammal<<endl;
+        for(i=0;i<l1.size();i++)
+        {
+            l1[i].display();
+        }
+    }
+    void insert()
+    {
+       animal::insert();
+       cout<<"lion is a king of beast(yes/no):";
+       cin>>mammal;
+       cout<<"\ndata is updated\n";
     }
 };
 class cat:public animal 
 {
     string vision;
+    int i;
+    vector<cat>c1;
     public:
     void getdata()
     {
@@ -103,6 +111,17 @@ class cat:public animal
     {
         animal::display();
         cout<<"night vision:"<<vision<<endl;
+        for(i=0;i<c1.size();i++)
+        {
+            c1[i].display();
+        }
+    }
+    void insert()
+    {
+       animal::insert();
+       cout<<"night vision in cat(yes/no):";
+       cin>>vision;
+       cout<<"data is updated";
     }
 };
 class bird:public animal
@@ -110,6 +129,8 @@ class bird:public animal
     string beaks;
     string nest;
     string name;
+    int i;
+    vector<bird>b1;
     public:
     void getdata()
     {
@@ -125,12 +146,27 @@ class bird:public animal
         cout<<"name of bird:"<<name<<endl;
         cout<<"bird's beak:"<<beaks<<endl;
         cout<<"nest type:"<<nest<<endl;
+        for(i=0;i<b1.size();i++)
+        {
+            b1[i].display();
+        }
+
+    }
+    void insert()
+    {
+       cout<<"\nenter name to be update:";
+       cin>>name;
+       cout<<"color of the bird:";
+       cin>>beaks;
+       cout<<"\ndata is updated";
     }
 };
 
 class peacock:public bird 
 {
     string color;
+    vector<peacock>p1;
+    int i;
     public:
     void getdata()
     {
@@ -142,12 +178,25 @@ class peacock:public bird
     {
         bird::display();
         cout<<"color of peacock:"<<color<<endl;
+        for(i=0;i<p1.size();i++)
+        {
+            p1[i].display();
+        }
+    }
+    void insert()
+    {
+       animal::insert();
+       cout<<"night vision in peacock(yes/no):";
+       cin>>color;
+       cout<<"data is updated";
     }
 };
 class crow:public bird 
 {
     string color;
     string tail;
+    int i;
+    vector<crow>c1;
     public:
     void getdata()
     {
@@ -162,11 +211,24 @@ class crow:public bird
         bird::display();
         cout<<"color:"<<color<<endl;
         cout<<"short or long tail bird:"<<tail<<endl;
+        for(i=0;i<c1.size();i++)
+        {
+            c1[i].display();
+        }
+    }
+    void insert()
+    {
+       bird::insert();
+       cout<<"\nupdate color:";
+       cin>>color;
+       cout<<"data is updated";
     }
 };
 class sparrow:public bird 
 {
     string speed;
+    int i;
+    vector<sparrow>s1;
     public:
     void getdata()
     {
@@ -178,6 +240,17 @@ class sparrow:public bird
     {
         bird::display();
         cout<<"speed in Km/h:"<<speed<<endl;
+        for(i=0;i<s1.size();i++)
+        {
+            s1[i].display();
+        }
+    }
+    void insert()
+    {
+       bird::insert();
+       cout<<"\nupdate speed:";
+       cin>>speed;
+       cout<<"\ndata is updated";
     }
 };
 
@@ -185,13 +258,11 @@ int main()
 {
     animal a;bird b;lion l;dog d;cat c;sparrow s;peacock p;
     crow r;
-    string fb,name;
-    int opt,a1,a2,a3,a4,a5;
-    vector <string> animalarray;
+    int opt,a1,a2,a3,a4,a5,a6,a7;
     do
     {  
-        cout<<"1.add\n2.delete\n3.display\n4.exit\n"<<endl;
-        cout<<"enter your choice:";
+        cout<<"1.ADD\n2.UPDATE\n3.DISPLAY\n4.EXIT\n"<<endl;
+        cout<<"\nenter your choice:";
         cin>>opt;
         if(opt==4)
         {
@@ -206,14 +277,14 @@ int main()
                 switch(a1)
                 {
                     case 1:
-                    cout<<"add data for:\n1.lion\t2.dog\t3.cat\n";
-                    cout<<"enter your choice:";
+                    cout<<"\nadd data for:\n1.lion\t2.dog\t3.cat\n";
+                    cout<<"\nenter your choice:";
                     cin>>a2;
                     switch(a2)
                     {
                         case 1:
                         cout<<"get data for lion:\n";
-                        a.getdata();
+                        l.getdata();
                         break;
                         case 2:
                         cout<<"get data for dog:\n";
@@ -229,7 +300,7 @@ int main()
                         exit(0);
                     }break;
                     case 2:
-                    cout<<"add data for bird:\n1.peacock\t2.sparrow\t3.crow\nenter your choice:";
+                    cout<<"\nadd data for bird:\n1.peacock\t2.sparrow\t3.crow\nenter your choice:";
                     cin>>a3;
                     switch(a3)
                     {
@@ -255,54 +326,83 @@ int main()
                     cout<<"enter valid option";
                     exit(0);
                 }
-
             }else if(opt==2)
             {
-                cout<<"\nplease enter data to be deleted for: ";
-                cout<<"\n1.lion\t2.dog\3.cat\n4.peacock\t5.sparrow\t6.crow\n";
-                cout<<"enter your choice:";
+                cout<<"\nData to be updated for: ";
+                cout<<"\n1.LION\t2.DOG\t3.CAT\n4.PEACOCK\t5.SPARROW\t6.CROW\n";
+                cout<<"\nenter your choice:";
                 cin>>a4;
                 switch(a4)
                 {
                     case 1:
-                    cout<<"delete data for lion:\n";
-                    a.deletedata();
-            
+                    cout<<"update data for lion:\n";
+                    l.insert();
                     break;
                     case 2:
-                    cout<<"delete data for dog:\n";
-                    d.deletedata();
+                    cout<<"update data for dog:\n";
+                    d.insert();
                     break;
                     case 3:
+                    cout<<"update data for cat:\n";
+                    c.insert();
+                    break;
+                    case 4:
+                    cout<<"update data for peacock:\n";
+                    p.insert();
+                    break;
+                    case 5:
+                    cout<<"update data for sparrow\n";
+                    s.insert();
+                    break;
+                    case 6:
+                    cout<<"update data for crow\n";
+                    r.insert();
+                    break;
+                    case 7:
                     default:
-                    cout<<"inavlid entry";
+                    cout<<"\ninavlid entry";
                     exit(0);
-
                 }
             }
             else if(opt==3)
             {
-                cout<<"display data for 1.lion\n2.dog\nenter your choice:";
+                cout<<"\nDisplay data for\n1.LION\t2.DOG\t3.CAT\n4.PEACOCK\t5.SPARROW\t6.CROW\nenter your choice:";
                 cin>>a5;
                 switch(a5)
                 {
                     case 1:
-                    cout<<"display data:";
-                    a.display();
+                    cout<<"\ndisplay data for lion:";
+                    l.display();
                     break;
                     case 2:
                     cout<<"display data for dog:";
                     d.display();
                     break;
                     case 3:
+                    cout<<"display data for cat:\n";
+                    c.display();
+                    break;
+                    case 4:
+                    cout<<"\ndisplay data for peacock\n";
+                    p.display();
+                    break;
+                    case 5:
+                    cout<<"display data for sparrow:\n";
+                    s.display();
+                    break;
+                    case 6:
+                    cout<<"display data for crow\n";
+                    r.display();
+                    break;
+                    case 7:
                     default:
                     cout<<"invalid option";
                     exit(0);
                 }
-
             }
-        }cout<<"endl"<<endl;
+        }cout<<"........................"<<endl;
     } while (opt!=4);
+
      return 0;
 }
     
