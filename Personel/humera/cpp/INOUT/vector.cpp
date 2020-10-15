@@ -9,17 +9,19 @@ class animal
     string cls;
     string data;
     string rn;
+    int n;
     vector <string> myvector;
     public:
     void getdata()
     {     
         cout<<"name:";
         cin>>name;
+        myvector.push_back(name);
         cout<<"class:";
         cin>>cls;
+        myvector.push_back(cls);
         data=name+" "+cls;
-        myvector.push_back(data);
-        
+        myvector.push_back(data);        
     }
     void display()
     {
@@ -30,15 +32,23 @@ class animal
     }
     void deletedata()
     {
-        myvector.clear();
-        cout<<"data is deleted\n";
-        
+       cout<<"please enter data to be deleted:";
+       cin>>rn;
+       for(int i=0;myvector.size();i++)
+       {
+           if(myvector[i].find(rn)!=std::string::npos)
+           myvector.erase(myvector.begin()+i);
+           break;       
+       }
+       cout<<"data is deleted";
     }
 };
 class dog:public animal
 {
     string type;
     string food;
+    string ad;
+    vector <string> adog;
     public:
     void getdata()
     {
@@ -47,12 +57,20 @@ class dog:public animal
         cin>>type;
         cout<<"food(omnivorous/carnivorous):";
         cin>>food;
+        ad=type+"   "+food;
+        adog.push_back(ad);
     }
     void display()
     {
         animal::display();
         cout<<"domestic/wild:"<<type<<endl;
         cout<<"food:"<<food<<endl;
+        cout<<"data:"<<ad<<endl;
+    }
+    void deletedata()
+    {
+        adog.clear();
+        cout<<"\ndata is deleted for dog\n";
     }
 };
 class lion:public animal
@@ -195,11 +213,12 @@ int main()
                     {
                         case 1:
                         cout<<"get data for lion:\n";
-                        l.getdata();
+                        a.getdata();
                         break;
                         case 2:
                         cout<<"get data for dog:\n";
                         d.getdata();
+                        break;
                         case 3:
                         cout<<"get data for cat:\n";
                         c.getdata();
@@ -247,10 +266,14 @@ int main()
                 {
                     case 1:
                     cout<<"delete data for lion:\n";
-                    l.deletedata();
-                
+                    a.deletedata();
+            
                     break;
                     case 2:
+                    cout<<"delete data for dog:\n";
+                    d.deletedata();
+                    break;
+                    case 3:
                     default:
                     cout<<"inavlid entry";
                     exit(0);
@@ -265,10 +288,15 @@ int main()
                 {
                     case 1:
                     cout<<"display data:";
-                    l.display();
+                    a.display();
                     break;
                     case 2:
+                    cout<<"display data for dog:";
+                    d.display();
+                    break;
+                    case 3:
                     default:
+                    cout<<"invalid option";
                     exit(0);
                 }
 
