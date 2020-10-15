@@ -63,8 +63,8 @@ public:
     void print()
     {
         cout << "Name :" << name << endl;
-        cout << " Color:" << color << endl;
-        cout << " Legs:" << legs << endl;
+        cout << "Color:" << color << endl;
+        cout << "Legs:" << legs << endl;
     }
     ~Mammal() {}
 };
@@ -81,7 +81,7 @@ public:
     void create()
     {
         cout << "Enter Name :";
-        cin >> name;
+        cin >> name; 
         cout << "Enter color:";
         cin >> color;
         cout << "Enter egg:";
@@ -119,8 +119,8 @@ public:
     void print()
     {
         cout << "Name :" << name << endl;
-        cout << " Color:" << color << endl;
-        cout << " Egg:" << egg << endl;
+        cout << "Color:" << color << endl;
+        cout << "Egg:" << egg << endl;
     }
 
     ~Bird() {}
@@ -129,12 +129,16 @@ public:
 class Dog : public Mammal
 {
 private:
+    
     string breed;
 
 public:
+    int id;
     Dog() {}
     void create()
     {
+        cout <<"Enter id:";
+        cin>>id;
         Mammal::create();
         cout << "Enter Breed :";
         cin >> breed;
@@ -160,6 +164,7 @@ public:
 
     void print()
     {
+        cout << "ID :" << id << endl;
         Mammal::print();
         cout << "Breed :" << breed << endl;
     }
@@ -172,9 +177,12 @@ private:
     string breed;
 
 public:
+    int id;
     Cat() {}
     void create()
     {
+        cout <<"Enter id:";
+        cin>>id;
         Mammal::create();
         cout << "Enter Breed :";
         cin >> breed;
@@ -200,6 +208,7 @@ public:
 
     void print()
     {
+        cout << "ID :" << id << endl;
         Mammal::print();
         cout << "Breed :" << breed << endl;
     }
@@ -212,9 +221,12 @@ private:
     string breed;
 
 public:
+    int id;
     Lion() {}
     void create()
     {
+        cout <<"Enter id:";
+        cin>>id;
         Mammal::create();
         cout << "Enter Breed :";
         cin >> breed;
@@ -240,6 +252,7 @@ public:
 
     void print()
     {
+        cout << "ID :" << id << endl;
         Mammal::print();
         cout << "Breed :" << breed << endl;
     }
@@ -252,9 +265,12 @@ private:
     int fly_high;
 
 public:
+    int id;
     Peocock() {}
     void create()
     {
+        cout <<"Enter id:";
+        cin>>id;
         Bird::create();
         cout << "Enter Flying Hight :";
         cin >> fly_high;
@@ -279,6 +295,7 @@ public:
     }
     void print()
     {
+        cout << "ID :" << id << endl;
         Bird::print();
         cout << "Flying Hight :" << fly_high << endl;
     }
@@ -291,10 +308,13 @@ private:
     int fly_high;
 
 public:
+    int id;
     Crow() {}
 
     void create()
     {
+        cout <<"Enter id:";
+        cin>>id;
         Bird::create();
         cout << "Enter Flying Hight :";
         cin >> fly_high;
@@ -320,6 +340,7 @@ public:
 
     void print()
     {
+        cout << "ID :" << id << endl;
         Bird::print();
         cout << "Flying Hight :" << fly_high << endl;
     }
@@ -332,9 +353,12 @@ private:
     int fly_high;
 
 public:
+    int id;
     Sparrow() {}
     void create()
     {
+        cout <<"Enter id:";
+        cin>>id;
         Bird::create();
         cout << "Enter Flying Hight :";
         cin >> fly_high;
@@ -360,6 +384,7 @@ public:
 
     void print()
     {
+        cout << "ID :" << id << endl;
         Bird::print();
         cout << "Flying Hight :" << fly_high << endl;
     }
@@ -374,13 +399,13 @@ int main()
     vector<Peocock> peocock1;
     vector<Crow> crow1;
     vector<Sparrow> sparrow1;
-    int obj[100];
-    int a, b, c, m1,m2,m3,m4,m5,m6, n;
-    int  cnt1 = 0, cnt2 = 0, cnt3 = 0,cnt4 = 0,cnt5 = 0,cnt6 = 0, i, x, y;
-
+    
+    int a, b, c, m1, m2, m3, m4, m5, m6, n,z,id,flag=0;
+    int cnt1 = 0, cnt2 = 0, cnt3 = 0, cnt4 = 0, cnt5 = 0, cnt6 = 0, i,j, x, y;
+    
     while (1)
     {
-        cout << "1.Mammal \n2.Birds\n3.Exit\nEnter choice:";
+        cout << "\n\n1.Mammal \n2.Birds\n3.Exit\nEnter choice:";
         cin >> a;
         switch (a)
         {
@@ -400,10 +425,10 @@ int main()
                     cnt1 = cnt1 + m1;
                     for (i = 0; i < m1; i++)
                     {
-                        cout << "Enter Datails:\n";
-                        //Dog *i;
-                        //dog1.push_back(i);
-                        dog1[i]->create();
+                        cout << "\nEnter Datails:\n";
+                        Dog dog;
+                        dog.create();
+                        dog1.push_back(dog);
                     }
                     break;
                 case 2:
@@ -414,6 +439,24 @@ int main()
                     }
                     break;
                 case 3:
+                    cout << "Enter ID to Update:";
+                    cin >> id;
+                    flag=0;
+                    for (j = 0; j < m1; j++)
+                    {
+                        if ((dog1[j].id) == id)
+                        {
+                            flag=1;
+                            cout << "\nWhich data you want to update:";
+                            cout << "\n1. Name \n2. Color\n3. Legs\n4. Breed";
+                            cout << "\nEnter Choice:";
+                            cin >> z;
+                            dog1[j].update(z);
+                        }
+                    }
+                    if(flag==0)
+                    cout <<"\nInvalide ! \n";
+                    break; 
                 default:
                     cout << "Invalid Choice\n";
                     break;
@@ -432,8 +475,10 @@ int main()
                     cnt2 = cnt2 + m2;
                     for (i = 0; i < m2; i++)
                     {
-                        cout << "Enter Datails:\n";
-                        cat1[i].create();
+                        cout << "\nEnter Datails:\n";
+                        Cat cat;
+                        cat.create();
+                        cat1.push_back(cat);
                     }
                     break;
                 case 2:
@@ -443,6 +488,26 @@ int main()
                         cat1[i].print();
                     }
                     break;
+
+                case 3: 
+                    cout << "Enter ID to Update:";
+                    cin >> id;
+                    flag=0;
+                    for (j = 0; j < m2; j++)
+                    {
+                        if ((cat1[j].id) == id)
+                        {
+                            flag=1;
+                            cout << "\nWhich data you want to update:";
+                            cout << "\n1. Name \n2. Color\n3. Legs\n4. Breed";
+                            cout << "\nEnter Choice:";
+                            cin >> z;
+                            cat1[j].update(z);
+                        }
+                    }
+                    if(flag==0)
+                    cout <<"\nInvalide ! \n";
+                    break;    
                 default:
                     cout << "Invalid Choice\n";
                     break;
@@ -461,8 +526,10 @@ int main()
                     cnt3 = cnt3 + m3;
                     for (i = 0; i < m3; i++)
                     {
-                        cout << "Enter Datails:\n";
-                        lion1[i].create();
+                        cout << "\nEnter Datails:\n";
+                        Lion lion;
+                        lion.create();
+                        lion1.push_back(lion);
                     }
                     break;
                 case 2:
@@ -472,6 +539,26 @@ int main()
                         lion1[i].print();
                     }
                     break;
+
+                case 3:
+                    cout << "Enter ID to Update:";
+                    cin >> id;
+                    flag=0;
+                    for (j = 0; j < m3; j++)
+                    {
+                        if ((lion1[j].id) == id)
+                        {
+                            flag=1;
+                            cout << "\nWhich data you want to update:";
+                            cout << "\n1. Name \n2. Color\n3. Legs\n4. Breed";
+                            cout << "\nEnter Choice:";
+                            cin >> z;
+                            lion1[j].update(z);
+                        }
+                    }
+                    if(flag==0)
+                    cout <<"\nInvalide ! \n";
+                    break;    
                 default:
                     cout << "Invalid Choice\n";
                     break;
@@ -503,8 +590,10 @@ int main()
                     cnt4 = cnt4 + m4;
                     for (i = 0; i < m4; i++)
                     {
-                        cout << "Enter Datails:\n";
-                        peocock1[i].create();
+                        cout << "\nEnter Datails:\n";
+                        Peocock peocock;
+                        peocock.create();
+                        peocock1.push_back(peocock);
                     }
                     break;
                 case 2:
@@ -513,6 +602,26 @@ int main()
 
                         peocock1[i].print();
                     }
+                    break;
+
+                case 3:
+                    cout << "Enter ID to Update:";
+                    cin >> id;
+                    flag=0;
+                    for (j = 0; j < m4; j++)
+                    {
+                        if ((peocock1[j].id) == id)
+                        {
+                            flag=1;
+                            cout << "\nWhich data you want to update:";
+                            cout << "\n1. Name \n2. Color\n3. Eggs\n4. Flying Hight";
+                            cout << "\nEnter Choice:";
+                            cin >> z;
+                            peocock1[j].update(z);
+                        }
+                    }
+                    if(flag==0)
+                    cout <<"\nInvalide ! \n";
                     break;
                 default:
                     cout << "Invalid Choice\n";
@@ -532,8 +641,10 @@ int main()
                     cnt5 = cnt5 + m5;
                     for (i = 0; i < m5; i++)
                     {
-                        cout << "Enter Datails:\n";
-                        crow1[i].create();
+                        cout << "\nEnter Datails:\n";
+                        Crow crow;
+                        crow.create();
+                        crow1.push_back(crow);
                     }
                     break;
                 case 2:
@@ -543,6 +654,26 @@ int main()
                         crow1[i].print();
                     }
                     break;
+
+                case 3:
+                    cout << "Enter ID to Update:";
+                    cin >> id;
+                    flag=0;
+                    for (j = 0; j < m5; j++)
+                    {
+                        if ((crow1[j].id) == id)
+                        {
+                            flag=1;
+                            cout << "\nWhich data you want to update:";
+                            cout << "\n1. Name \n2. Color\n3. Eggs\n4. Flying Hight";
+                            cout << "\nEnter Choice:";
+                            cin >> z;
+                            crow1[j].update(z);
+                        }
+                    }
+                    if(flag==0)
+                    cout <<"\nInvalide ! \n";
+                    break;    
                 default:
                     cout << "Invalid Choice\n";
                     break;
@@ -561,8 +692,10 @@ int main()
                     cnt6 = cnt6 + m6;
                     for (i = 0; i < m6; i++)
                     {
-                        cout << "Enter Datails:\n";
-                        sparrow1[i].create();
+                        cout << "\nEnter Datails:\n";
+                        Sparrow sparrow;
+                        sparrow.create();
+                        sparrow1.push_back(sparrow);
                     }
                     break;
                 case 2:
@@ -573,6 +706,26 @@ int main()
                         sparrow1[i].print();
                     }
                     break;
+
+                case 3:
+                    cout << "Enter ID to Update:";
+                    cin >> id;
+                    flag=0;
+                    for (j = 0; j < m6; j++)
+                    {
+                        if ((sparrow1[j].id) == id)
+                        {
+                            flag=1;
+                            cout << "\nWhich data you want to update:";
+                            cout << "\n1. Name \n2. Color\n3. Eggs\n4. Flying Hight";
+                            cout << "\nEnter Choice:";
+                            cin >> z;
+                            sparrow1[j].update(z);
+                        }
+                    }
+                    if(flag==0)
+                    cout <<"\nInvalide ! \n";
+                    break;    
                 default:
                     cout << "Invalid Choice\n";
                     break;
