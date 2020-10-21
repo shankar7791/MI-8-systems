@@ -3,9 +3,9 @@ using namespace std;
 int main()
  {
    string str;
-   int term = 4;
+   int line = 4;
 
-   while (term--)
+   while (line--)
    {
       getline(cin, str);
 
