@@ -1,0 +1,21 @@
+#Test case
+
+Bubble Sort
+1.sort is working properly or not.
+2.Is it sorting in the required order or not.
+3.Is it working for diffrent sizes of data or not.
+4.Time required to in sorting.
+5.number of comparisons.
+
+Quick Sort
+1.sort is working properly or not.
+2.Is it sorting in the required order or not.
+3.Is it working for different sizes of data or not.
+4.Time required as compare to bubble sort.
+
+Binery seacrch
+1.Is searching operation working properly or not.
+2.Is it giving correct result or not.
+3.How much data it accepting.
+4.Is it working for different sizes of data or not.
+5.How much time it is taking. 
