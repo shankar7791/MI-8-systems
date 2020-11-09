@@ -1,4 +1,4 @@
-/* double pointer program ptr to ptr */
+/* double pointer program ptr to ptr ....*/
 
 #include <iostream>
 
