@@ -1,3 +1,5 @@
+/* double pointer program ptr to ptr */
+
 #include <iostream>
 
 using namespace std;
