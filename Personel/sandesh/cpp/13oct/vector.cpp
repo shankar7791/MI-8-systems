@@ -19,6 +19,7 @@ main()
    do {
       cout<<"Enter your Choice: "<<endl;
       cin>>ch;
+
       switch(ch)
       {
          case 1:
@@ -28,7 +29,9 @@ main()
          break;
 
          case 2:
+
          cout<<"Last Element is deleted:"<<endl;
+
          vec.pop_back();
          break;
 
@@ -38,7 +41,9 @@ main()
          break;
 
          case 4:
+
          cout<<"Display Elements: ";
+
          for (int i = 0; i < vec.size(); i++)
          cout<<vec[i]<<" ";
          cout<<endl;
@@ -46,6 +51,7 @@ main()
 
          case 5:
          vec.clear();
+
          cout<<"Vector Cleared:"<<endl;
          break;
 
@@ -54,6 +60,7 @@ main()
          break;
          default:
          cout<<"invalid option:"<<endl;
+
       }
    } while (ch!=6);
    return 0;
