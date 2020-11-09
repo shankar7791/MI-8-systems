@@ -7,14 +7,14 @@ Mentor - Aishwarya
 
     1. Adesh Kumbhar
     2. Chetan Kulkarni
-    3. Mohammed Nawaz
+    3. Usharani Sherla
 
 Team 02
 Mentor - Harshada
 
     4. Humera tamkeen
-    5. Mahadev Rane
-    6. Mohit Singh
+    5. Vishajeet Kumar
+    6. Kalyani Burde
 
 Team-03 
 Mentor - Divyani
@@ -33,36 +33,19 @@ Mentor - kishori
 Team-05
 Mentor - Prajwal
 
-    13. Vishakha Angre
-    14. SaiKrishna Rachuri
-    15. Mohammad Imran
+    13. Jyoti Ingale 
+    14. Vikas Awate
+    15. Kiran Bandi
 
 Team-06
 Mentor - Rupam
 
-    16. Gaytri Patil
-    17. P Harikrishna Naidu
-    18. Priti Nakhate
+    16. Tejas Newase
+    17. Hrushikesh Rasale
+    18. Sandesh Suryawanshi
 
-Team-07
-Mentor - Shankar
-
-    19. Vishwajeet Kumar
-    20. Sushmita Suryawanshi
-    21. Usharani Sherla
     
 
-Team-08
-Mentor - Shankar
-
-    22. Gaurav Singh
-    23. Swathi s
-    24. UvaRani.V
-    
-Team-09
-Mentor - sagar
-
-    25. Sandesh Suryawanshi
     
     
    
