@@ -4,6 +4,7 @@ TARGET = car
 
 # other source files and the associated object files (this can be blank)
  SRC =  car.cpp
+ SRC1=  ex1.cpp  
 #  SRC1 =  menu.c
  OBJ = $(SRC:.c=.o)
 #  OBJ1 = $(SRC1:.c=.o)
