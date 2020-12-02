@@ -1,0 +1,11 @@
+void entryTeacher();
+void entryStudent();
+void searchAT();
+void searchAS();
+void printTeacher();
+void printStudent();
+void searchT();
+void searchS();
+void paymentCheckS();
+void paymentCheckT();
+int call();
